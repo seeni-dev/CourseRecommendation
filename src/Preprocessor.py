@@ -51,3 +51,18 @@ def preprocess(data,train=True):
     data["FI"].replace(FIDict,inplace=True)
 
     return data
+
+
+def getRevereseDict(d):
+    return dict(zip(
+        d.values(),d.keys())
+    )
+
+
+def getStringSubjects(nums):
+    global  subjectsDict
+    reverseSubjectsDict=getRevereseDict(subjectsDict)
+    if(not type(nums)==list):
+        return reverseSubjectsDict[nums]
+    else:
+        return [  reverseSubjectsDict[num] for num in nums ]
