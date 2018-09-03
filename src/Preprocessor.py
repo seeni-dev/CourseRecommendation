@@ -71,7 +71,5 @@ def getStringSubjects(nums):
 def getStringFI(fi):
     global FIDict
     FIReverseDict=getRevereseDict(FIDict)
-    if(not type(fi)==list):
-        return FIReverseDict[fi]
     fi = list(fi)
     return [ FIReverseDict[fi_] for fi_ in fi ]

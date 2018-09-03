@@ -9,8 +9,11 @@ def testDrive():
     train_data=csvhand.getData()
     train_data_pro=Preprocessor.preprocess(train_data)
     Model.Init()
-    Model.Train(train_data_pro)
+    labels_=Model.Train(train_data_pro)
+    print(labels_)
     print(Model.getClusterCenters())
+    print(Preprocessor.FIDict)
+
 
 
 if __name__ == '__main__':

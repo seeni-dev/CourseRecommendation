@@ -8,7 +8,7 @@ def Init():
 
 def Train(data):
 	model.fit(data)
-	print(model.labels_)
+	return model.labels_
 
 def getClusterCenters():
 	return model.cluster_centers_
