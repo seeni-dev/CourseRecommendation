@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 def makeDict(col):
     d={}
@@ -26,6 +27,18 @@ def getSubjects(data):
 
     return subjects
 
+
+def sortElectives(data):
+    electives=["E1","E2","E3","E4"]
+    import pdb
+    for i in range(len(data)):
+        subjects=list(data[i:(i+1)][electives])
+        subjects.sort()
+        for el,sub in zip(electives,subjects):
+            data[i:(i+1)][el]=sub
+    pdb.set_trace()
+
+
 def preprocess(data,train=True):
     '''
 
@@ -49,7 +62,7 @@ def preprocess(data,train=True):
 
     #replace FI by id
     data["FI"].replace(FIDict,inplace=True)
-
+    sortElectives(data)
     return data
 
 
