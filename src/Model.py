@@ -4,7 +4,15 @@ import sklearn.cluster as cluster
 model = None
 def Init():
 	global model
-	model = cluster.KMeans(n_clusters=4,max_iter=100000,random_state=30)
+	model=None
+	model = cluster.KMeans(n_clusters=4)
+	return
+
+def getRandomState():
+	global model
+	#todo code to find the random state of the model
+	return 	model.random_state
+
 
 def Train(data):
 	model.fit(data)
