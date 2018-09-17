@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 def makeDict(col):
     d={}
@@ -16,28 +15,55 @@ def makeDict(col):
 FIDict=None
 subjectsDict=None
 
-def getSubjects(data):
-
-    electives=["E1","E2","E3","E4"]
+def getSubjectsRaw(data):
+    '''
+    :param data: data consisting of tuples (FI,E1,E2,E3...EN)
+    :return: set of subjects in data
+    '''
     subjects=set()
-
-    for el in electives:
-        subjects_=list(data[el].values)
-        subjects=subjects.union(set(subjects_))
-
+    for row in data:
+        subjects=subjects.union(row[1:])
     return subjects
 
+def sortSubjects(data):
+    '''
 
-def sortElectives(data):
-    electives=["E1","E2","E3","E4"]
-    import pdb
-    for i in range(len(data)):
-        subjects=list(data[i:(i+1)][electives])
+    :param data: data consisting of tuples (FI,E1,E2,E3...EN)
+    :return :similar data consisting of tuples (FI,E1,E2,E3...EN) with subjects sorted for each row
+    '''
+    data_sort=[]
+    for rowi in data:
+        row=list(rowi)
+
+        subjects=row[1:]
         subjects.sort()
-        for el,sub in zip(electives,subjects):
-            data[i:(i+1)][el]=sub
-    pdb.set_trace()
+        for si in range(len(subjects)):
+            subject=subjects[si]
+            row[1+si]=subject
+        data_sort.append(row)
+    return data_sort
 
+def toRaw(data_pd):
+    '''
+
+    :param data_pd: pandas dataframe
+    :return: data in raw list format
+    '''
+    data=data_pd.to_records(index=False)
+    data_list=[]
+    for d in data:
+        data_list.append(list(d))
+    return data_list
+
+
+def getSubjectsPd(data):
+    '''
+    :param data: pandas Dataframe consisting of tuples (FI,E1...EN)
+    :return: list of subjects
+    '''
+    data_r=toRaw(data)
+    subjects=getSubjectsRaw(data_r)
+    return subjects
 
 def preprocess(data,train=True):
     '''
@@ -50,7 +76,7 @@ def preprocess(data,train=True):
     data.drop(labels=["ID"],axis=1,inplace=True)
     electives=["E1","E2","E3","E4"]
     if(train):
-        subjects_list=getSubjects(data)
+        subjects_list=getSubjectsPd(data)
         subjectsDict=makeDict(subjects_list)
 
     for el in electives:
@@ -60,11 +86,15 @@ def preprocess(data,train=True):
         #find field of interest
         FIDict=makeDict(data["FI"])
 
+
     #replace FI by id
     data["FI"].replace(FIDict,inplace=True)
-    sortElectives(data)
+    features=data.columns
+    data=toRaw(data)
+    data=sortSubjects(data)
+    data=pd.DataFrame(data)
+    data.columns=features
     return data
-
 
 def getRevereseDict(d):
     return dict(zip(
