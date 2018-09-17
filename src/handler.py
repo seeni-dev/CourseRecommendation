@@ -22,12 +22,16 @@ class Handler():
 
 
 class CSVHandler(Handler):
-    def __init__(self,filepath="input.csv"):
+    '''
+        Class for CSV Handler which reads CSV files and handles data that is read
+    '''
+    def __init__(self, filepath="input.csv"):
         '''
         Initializes the handler for reading inputs from csv and the stream
         :param filepath: location to the input file
         '''
 
+        super().__init__()
         self.filepath=filepath
 
         return
