@@ -22,14 +22,14 @@ class Handler():
 
 
 class CSVHandler(Handler):
-    '''
+    """
         Class for CSV Handler which reads CSV files and handles data that is read
-    '''
+    """
     def __init__(self, filepath="input.csv"):
-        '''
+        """
         Initializes the handler for reading inputs from csv and the stream
         :param filepath: location to the input file
-        '''
+        """
 
         super().__init__()
         self.filepath=filepath
@@ -37,16 +37,15 @@ class CSVHandler(Handler):
         return
 
     def open(self):
-        '''
+        """
 
         :return: it  opens the file
-        '''
-        self.df=pandas.read_csv(self.filepath)
+        """
+        self.df = pandas.read_csv(self.filepath)
 
     def getData(self):
-        '''
+        """
 
         :return: python dataframe for the data in the csv file
-        '''
-        return  self.df
-
+        """
+        return self.df
