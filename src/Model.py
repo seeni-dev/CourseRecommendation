@@ -13,5 +13,5 @@ def Train(data):
 def getClusterCenters():
 	return model.cluster_centers_
 
-def getInertia():
+def getCost():
 	return model.inertia_
