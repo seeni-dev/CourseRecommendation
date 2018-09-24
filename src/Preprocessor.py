@@ -78,16 +78,20 @@ def preprocess(data,train=True):
     #make cateogical values
     for fi in fieldOfInterests:
         col="FI_"+fi
-        values=[]
-        for fientry in data["FI"].values:
-            values.append(1 if fientry==fi else 0)
+        values=[0]*len(data)
+        for fientry_i in range(len(data["FI"].values)):
+            fientry=data["FI"].values[fientry_i]
+            if(fientry==fi):
+                values[fientry_i]=1
         data_n[col]=values
 
     for sub in subjects:
         subcol="S_"+sub
-        values=[]
-        for subjects in data.drop("FI",axis=1).values:
-            values.append(1 if sub in subjects else 0)
+        values=[0]*len(data)
+        for subject_i in range(len(data.drop("FI",axis=1).values)):
+            subject=data.drop("FI",axis=1).values[subject_i]
+            if(sub in subject):
+                values[subject_i]=1
         data_n[subcol]=values
     return data_n
 

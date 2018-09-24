@@ -13,13 +13,29 @@ def Train():
     labels_ = Model.Train(train_data_pro)
     return
 
-def predict():
+def Predict():
     #get user input from file test.csv
-    csvhand=handler.CSVHandler("../DATA/input.csv")
+    csvhand=handler.CSVHandler("../DATA/test.csv")
     csvhand.open()
-    train_data=csvhand.getData(train=False)
-    labels=train_data["FI"]
-    train_data_pro=Preprocessor.preprocess(train_data)
+    pred_data=csvhand.getData()
+    labels=pred_data["FI"]
+    pred_data_pro=Preprocessor.preprocess(pred_data,train=False)
+    fieldsInData=pred_data_pro.columns
+    pred=Model.Predict(pred_data_pro)
+    C = Model.getClusterCenters()
+    for pre_i in range(len(pred)):
+        #get the cluster center for it
+        pre=pred[pre_i]
+        Ctarget=C[pre]
+        stu=pred_data_pro.values[pre_i]
+        print("Needed ",end=" ")
+        for att_i in range(len(fieldsInData)):
+            Catt=Ctarget[att_i]
+            stuatt=stu[att_i]
+            field=fieldsInData[att_i]
+            if(Catt>0.5):
+                print(field,end=" ")
+        print()
     return
 
 
@@ -49,3 +65,4 @@ def testDrive():
 
 if __name__ == '__main__':
     Train()
+    Predict()
