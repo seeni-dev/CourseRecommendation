@@ -42,12 +42,11 @@ def testDrive():
     csvhand=handler.CSVHandler("../DATA/input.csv")
     csvhand.open()
     train_data=csvhand.getData()
+    labels=train_data["FI"]
     train_data_pro=Preprocessor.preprocess(train_data)
-    labels=train_data_pro["FI"]
     Model.Init()
     labels_=Model.Train(train_data_pro)
-    print("Accuracy",accuracy_score(labels,labels_))
-    print(Model.getCost())
-
+    print(labels_)
+    print(labels.values)
 if __name__ == '__main__':
-    getBestModel(1000)
+    testDrive()

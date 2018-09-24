@@ -1,5 +1,9 @@
 import pandas as pd
 
+
+subjects=[]
+fieldOfInterests=[]
+
 def makeDict(col):
     d={}
     num=0
@@ -25,23 +29,6 @@ def getSubjectsRaw(data):
         subjects=subjects.union(row[1:])
     return subjects
 
-def sortSubjects(data):
-    '''
-
-    :param data: data consisting of tuples (FI,E1,E2,E3...EN)
-    :return :similar data consisting of tuples (FI,E1,E2,E3...EN) with subjects sorted for each row
-    '''
-    data_sort=[]
-    for rowi in data:
-        row=list(rowi)
-
-        subjects=row[1:]
-        subjects.sort()
-        for si in range(len(subjects)):
-            subject=subjects[si]
-            row[1+si]=subject
-        data_sort.append(row)
-    return data_sort
 
 def toRaw(data_pd):
     '''
@@ -81,12 +68,15 @@ def preprocess(data,train=True):
     :param data: pandas dataframe containing data for preocessiong
     :return: dataframe with all the categorical data as separate dimension
     '''
+    global subjects,fieldOfInterests
     data.drop("ID",axis=1,inplace=True)
-    subjects=getSubjectsPd(data)
-    fieldOfInterest=getFIPd(data)
+    if(train):
+        subjects=getSubjectsPd(data)
+        fieldOfInterests=getFIPd(data)
+
     data_n=pd.DataFrame()
     #make cateogical values
-    for fi in fieldOfInterest:
+    for fi in fieldOfInterests:
         col="FI_"+fi
         values=[]
         for fientry in data["FI"].values:
@@ -106,18 +96,3 @@ def getRevereseDict(d):
         d.values(),d.keys())
     )
 
-
-def getStringSubjects(nums):
-    global  subjectsDict
-    reverseSubjectsDict=getRevereseDict(subjectsDict)
-    if(not type(nums)==list):
-        return reverseSubjectsDict[nums]
-    else:
-        return [  reverseSubjectsDict[num] for num in nums ]
-
-
-def getStringFI(fi):
-    global FIDict
-    FIReverseDict=getRevereseDict(FIDict)
-    fi = list(fi)
-    return [ FIReverseDict[fi_] for fi_ in fi ]
