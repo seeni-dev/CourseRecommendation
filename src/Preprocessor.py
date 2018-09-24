@@ -65,36 +65,41 @@ def getSubjectsPd(data):
     subjects=getSubjectsRaw(data_r)
     return subjects
 
+def getFIPd(data):
+    """
+
+    :param data: pandas dataframe
+    :return: list of FI
+
+    """
+    fieldOfInterest=set([fi for fi in data["FI"].values])
+    return list(fieldOfInterest)
+
 def preprocess(data,train=True):
     '''
 
     :param data: pandas dataframe containing data for preocessiong
-    :return: dataframe with all the categoraicl data replaced with its numerical equivalents
+    :return: dataframe with all the categorical data as separate dimension
     '''
-    global FIDict, subjectsDict
-    #remove ID
-    data.drop(labels=["ID"],axis=1,inplace=True)
-    electives=["E1","E2","E3","E4"]
-    if(train):
-        subjects_list=getSubjectsPd(data)
-        subjectsDict=makeDict(subjects_list)
+    data.drop("ID",axis=1,inplace=True)
+    subjects=getSubjectsPd(data)
+    fieldOfInterest=getFIPd(data)
+    data_n=pd.DataFrame()
+    #make cateogical values
+    for fi in fieldOfInterest:
+        col="FI_"+fi
+        values=[]
+        for fientry in data["FI"].values:
+            values.append(1 if fientry==fi else 0)
+        data_n[col]=values
 
-    for el in electives:
-        data[el].replace(subjectsDict,inplace=True)
-
-    if(train):
-        #find field of interest
-        FIDict=makeDict(data["FI"])
-
-
-    #replace FI by id
-    data["FI"].replace(FIDict,inplace=True)
-    features=data.columns
-    data=toRaw(data)
-    data=sortSubjects(data)
-    data=pd.DataFrame(data)
-    data.columns=features
-    return data
+    for sub in subjects:
+        subcol="S_"+sub
+        values=[]
+        for subjects in data.drop("FI",axis=1).values:
+            values.append(1 if sub in subjects else 0)
+        data_n[subcol]=values
+    return data_n
 
 def getRevereseDict(d):
     return dict(zip(
