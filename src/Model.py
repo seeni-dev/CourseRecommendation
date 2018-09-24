@@ -18,6 +18,10 @@ def Train(data):
 	model.fit(data)
 	return model.labels_
 
+def Predict(data):
+    return  model.predict(data)
+
+
 def getClusterCenters():
 	return model.cluster_centers_
 
