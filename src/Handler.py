@@ -6,19 +6,19 @@ class Handler():
         pass
 
     def connect(self):
-        pass
+        raise Exception("Need to be implemented")
 
     def open(self):
-        pass
+        raise Exception("Need to be implemented")
 
     def read(self):
-        pass
+        raise Exception("Need to be implemented")
 
     def getData(self):
-        pass
+        raise Exception("Need to be implemented")
 
     def getId(self):
-        pass
+        raise Exception("Need to be implemented")
 
 
 class CSVHandler(Handler):
@@ -27,25 +27,20 @@ class CSVHandler(Handler):
     """
     def __init__(self, filepath="input.csv"):
         """
-        Initializes the handler for reading inputs from csv and the stream
+        Initializes the handler for reading inputs from csv
         :param filepath: location to the input file
+        :return:
         """
 
         super().__init__()
         self.filepath=filepath
-
+        self.data = pandas.read_csv(self.filepath)
         return
 
-    def open(self):
-        """
-
-        :return: it  opens the file
-        """
-        self.df = pandas.read_csv(self.filepath)
 
     def getData(self):
         """
 
-        :return: python dataframe for the data in the csv file
+        :return: pandas dataframe for the data read from the csv file
         """
-        return self.df
+        return self.data
