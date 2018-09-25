@@ -30,15 +30,15 @@ def Predict():
     C = Model.getClusterCenters() #cluster centers
     for pred_i in range(len(predictions)):
         pred=predictions[pred_i] #get the prediciton vlaue form the list
-        Ctarget=C[pred]  # get he corresponding cluster
+        Ctarget=C[pred]  # get the corresponding cluster
         student=pred_data_pro.values[pred_i] #get the row of values (for a student) for which predicition is done
         print("Needed ",end=" ")
         for att_i in range(len(fieldsInData)):
             Catt=Ctarget[att_i] #Cluster attribute value
             studentAtt=student[att_i]  # attribute value present in thhe
             field=fieldsInData[att_i]  # column name
-            if(Catt>0.5): #if the value is high . This might me changed later
-                print(field,end=" ") #print the field or append it to the result array
+            if(Catt>0.5): #if the value is high . Value might me changed later
+                print(field,end=" ") # print the field or append it to the result array
         print()
     return
 
