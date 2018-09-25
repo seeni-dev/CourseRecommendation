@@ -1,7 +1,7 @@
 import Handler
 import Preprocessor
 import Model
-
+import pandas as pd
 def Train():
     """
        Trains the model with data from DATA/input.csv
@@ -42,6 +42,46 @@ def Predict():
         print()
     return
 
+def PredictRaw(studentRecord):
+    """
+        Predicts the data from DATA/test.csv
+    :studentRecord: data of the format [ID,FI,E1...E2] ID and FI are must
+    :return: list of subjects he should have studied
+    """
+
+    pred_data=pd.DataFrame().from_records([studentRecord])
+    pred_data.columns=["ID","FI","E","E","E"]
+    pred_data_pro=Preprocessor.preprocess(pred_data,train=False)
+    FI=list(Preprocessor.getFI())
+    subjects=list(Preprocessor.getSubjects())
+    fieldsInData=FI+subjects # fields are FI_X and S_X
+    predictions=Model.Predict(pred_data_pro)
+    C = Model.getClusterCenters() #cluster centers
+
+    pred=predictions[0] #get the prediciton value which is the only value present
+    Ctarget=C[pred]  # get the corresponding cluster
+    student=pred_data_pro.values[0] #get the row of values (for a student) for which predicition is done
+    print("Needed ",end=" ")
+    result={
+        "FI":None,
+        "S":[]
+    }
+    for att_i in range(len(fieldsInData)):
+        Catt=Ctarget[att_i] #Cluster attribute value
+        studentAtt=student[att_i]  # attribute value present in thhe
+        field=fieldsInData[att_i]  # column name
+        if(Catt>0.5): #if the value is high . Value might me changed later
+            print(field,end=" ") # print the field or append it to the result array
+            if(field in FI):
+                result["FI"]=field
+            else:
+                result["S"].append(field)
+    print()
+    return result
+
 if __name__ == '__main__':
     Train()
-    Predict()
+    result=PredictRaw([1,"AI","OS","CN","CV"])
+    print("OUTPUT:",result)
+    result=PredictRaw([1,"AI",None,None,None])
+    print("OUTPUT:",result)
