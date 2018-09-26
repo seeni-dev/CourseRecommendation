@@ -138,6 +138,7 @@ def PredictForServer(studentRecord):
     nextSubject=PredictNextSubject(studentRecord[2:],result["S"])
     print("REsult",result)
     print("nextSubject",nextSubject)
+    return nextSubject
 
 if __name__ == '__main__':
     Train()
