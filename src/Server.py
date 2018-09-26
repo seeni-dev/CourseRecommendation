@@ -16,24 +16,28 @@ def predictNextSubject():
             data=request.get_json();
             student=[data["ID"],data["FI"]]
             student.extend([s for s in data["S"] ]); #it should not contai any none and undefined
-            nextSubject, nextSubjectDifficulty, maxDifficultyStudent=Driver.PredictForServer(student);
+            nextSubject, nextSubjectDifficulty, maxDifficultyStudent,allowableSubjects=Driver.PredictForServer(student);
             print("Next Subject",nextSubject);
             reply={
                 "nextSubject":nextSubject,
                 "status":"OK",
                 "error":"None",
                 "nextSubjectDifficulty":nextSubjectDifficulty,
-                "maxDifficultyStudent":maxDifficultyStudent
+                "maxDifficultyStudent":maxDifficultyStudent,
+                "allowableSubjects":allowableSubjects
             }
             print(json)
             return json.dumps(reply)
         except Exception as e:
+            print(e)
             reply={
                 "status":"Error",
                 "error":str(e)
             }
+
+            if(str(e)=="MD"):
+                reply["status"]="MD"
             return json.dumps(reply)
-    return "Working"
 
 def setupDriver():
     Driver.Train()

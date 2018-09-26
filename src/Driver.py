@@ -108,6 +108,8 @@ def PredictNextSubject(student_subjects,pred_subjects,debug=False):
     maxDifficultyStudent=max(difficulty_subjects) # find the subjects which the student has taken for the field
     allowableSubjects=[sub for sub in pred_subjects if difficulty[sub] > maxDifficultyStudent]
     allowableSubjects.sort(key=lambda sub: difficulty[sub])
+    if(len(allowableSubjects)==0):
+        raise Exception("MD") #max diff
     nextDifficultySubject=allowableSubjects[0]
     nextDifficulty = difficulty[nextDifficultySubject]
     if(debug):
@@ -135,7 +137,7 @@ def PredictForServer(studentRecord):
     result=PredictRaw(studentRecord)
     nextSubject,nextSubjectDifficulty,maxDifficultyStudent,allowableSubjects=PredictNextSubject(studentRecord[2:],result["S"])
     print(nextSubject,nextSubjectDifficulty,maxDifficultyStudent)
-    return nextSubject,nextSubjectDifficulty,maxDifficultyStudent
+    return nextSubject,nextSubjectDifficulty,maxDifficultyStudent,allowableSubjects
 
 if __name__ == '__main__':
     Train()
