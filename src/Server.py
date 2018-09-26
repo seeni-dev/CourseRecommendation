@@ -1,6 +1,6 @@
 from flask import Flask,request
 import Driver
-
+import json
 
 def setup():
     Driver.Train()
@@ -16,13 +16,23 @@ def predictNextSubject():
             data=request.get_json();
             student=[data["ID"],data["FI"]]
             student.extend([s for s in data["S"] ]); #it should not contai any none and undefined
-            nextSubject=Driver.PredictForServer(student);
+            nextSubject, nextSubjectDifficulty, maxDifficultyStudent=Driver.PredictForServer(student);
             print("Next Subject",nextSubject);
-            returnString="{"+ "\"nextSubject\":\" "+"{}".format(nextSubject)+"\"}";
-            return returnString
+            reply={
+                "nextSubject":nextSubject,
+                "status":"OK",
+                "error":"None",
+                "nextSubjectDifficulty":nextSubjectDifficulty,
+                "maxDifficultyStudent":maxDifficultyStudent
+            }
+            print(json)
+            return json.dumps(reply)
         except Exception as e:
-            returnString = "{" + "\"nextSubject\":\" " + "{}".format('Error: '+str(e)) + "\"}";
-            return returnString
+            reply={
+                "status":"Error",
+                "error":str(e)
+            }
+            return json.dumps(reply)
     return "Working"
 
 def setupDriver():

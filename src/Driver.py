@@ -97,30 +97,26 @@ def getDifficulty():
         "WS":12
     }
 
+def diffcultyForSubjects(subjects):
+    diffculty=getDifficulty()
+    return [diffculty[sub] for sub in subjects if sub!=None]
+
 def PredictNextSubject(student_subjects,pred_subjects,debug=False):
     difficulty=getDifficulty()
-    difficulty_subjects=[difficulty[sub] for sub in student_subjects if sub!=None]
+    difficulty_subjects=diffcultyForSubjects(student_subjects)
     difficulty_subjects.append(0)
     maxDifficultyStudent=max(difficulty_subjects) # find the subjects which the student has taken for the field
-    #find the next smaller higher difficulty subject
-    nextDifficulty=1000
-    #highest Diffulty Subject
-    nextDifficultySubject=None
-    for sub in difficulty.keys():
-        diffi=difficulty[sub]
-        if( not sub in pred_subjects):
-            continue
-        if(diffi>maxDifficultyStudent): # check for subject is challenging enough
-            if(diffi<nextDifficulty):
-                nextDifficulty=diffi
-                nextDifficultySubject=sub
+    allowableSubjects=[sub for sub in pred_subjects if difficulty[sub] > maxDifficultyStudent]
+    allowableSubjects.sort(key=lambda sub: difficulty[sub])
+    nextDifficultySubject=allowableSubjects[0]
+    nextDifficulty = difficulty[nextDifficultySubject]
     if(debug):
         print("Difficulty of Subjects choosen by student {}".format([[sub, difficulty[sub]] for sub in student_subjects if sub!=None]))
         print("Difficulty of Subjects predicted for student {}".format([[sub, difficulty[sub]] for sub in pred_subjects if sub!=None]))
         print("Next Difficulty : {}  Subject: {}".format(nextDifficulty,nextDifficultySubject))
     if(nextDifficultySubject==None):
         raise Exception("Max difficulty reached");
-    return nextDifficultySubject
+    return nextDifficultySubject,nextDifficulty,maxDifficultyStudent,allowableSubjects
 
 
 def formatStudent(stu):
@@ -137,10 +133,9 @@ def formatStudent(stu):
 def PredictForServer(studentRecord):
     studentRecord=formatStudent(studentRecord)
     result=PredictRaw(studentRecord)
-    nextSubject=PredictNextSubject(studentRecord[2:],result["S"])
-    print("Result",result)
-    print("nextSubject",nextSubject)
-    return nextSubject
+    nextSubject,nextSubjectDifficulty,maxDifficultyStudent,allowableSubjects=PredictNextSubject(studentRecord[2:],result["S"])
+    print(nextSubject,nextSubjectDifficulty,maxDifficultyStudent)
+    return nextSubject,nextSubjectDifficulty,maxDifficultyStudent
 
 if __name__ == '__main__':
     Train()

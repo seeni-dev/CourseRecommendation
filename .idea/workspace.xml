@@ -5,7 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/Preprocessor.py" description="values.append(1 if sub in subjects else 0)" line="70" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e57cbe-ef76-4195-8b93-0e3d4a8b2a58" name="Default" comment="done P">
+    <list default="true" id="c4e57cbe-ef76-4195-8b93-0e3d4a8b2a58" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Driver.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.py" afterDir="false" />
@@ -18,25 +18,26 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CourseRecommendation$Driver.coverage" NAME="Driver Coverage Results" MODIFIED="1537942752559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/CourseRecommendation$Server.coverage" NAME="Server Coverage Results" MODIFIED="1537948357045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/CourseRecommendation$Server.coverage" NAME="Server Coverage Results" MODIFIED="1537959779756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="188262683">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="10" />
+          <entry key="csv" value="11" />
           <entry key="html" value="2" />
           <entry key="py" value="59" />
         </counts>
@@ -44,7 +45,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="PLAIN_TEXT" value="11" />
           <entry key="Python" value="59" />
         </counts>
       </usages-collector>
@@ -52,46 +53,46 @@
         <counts>
           <entry key="csv" value="60" />
           <entry key="html" value="1684" />
-          <entry key="py" value="8285" />
-          <entry key="txt" value="321" />
+          <entry key="py" value="9161" />
+          <entry key="txt" value="376" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1684" />
-          <entry key="PLAIN_TEXT" value="381" />
-          <entry key="Python" value="8285" />
+          <entry key="PLAIN_TEXT" value="436" />
+          <entry key="Python" value="9161" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Driver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="121" column="50" selection-start-line="121" selection-start-column="50" selection-end-line="121" selection-end-column="50" />
+            <state relative-caret-position="108">
+              <caret line="111" column="54" selection-start-line="111" selection-start-column="54" selection-end-line="111" selection-end-column="54" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1537948282945" expanded="true" signature="3197:3455" ph="..." />
-                <marker date="1537948282945" expanded="true" signature="5068:5307" ph="..." />
+                <marker date="1537959771314" expanded="true" signature="3490:3583" ph="..." />
+                <marker date="1537959771314" expanded="true" signature="3582:3583" ph="..." />
+                <marker date="1537959771314" expanded="true" signature="5026:5371" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+            <state relative-caret-position="121">
+              <caret line="35" column="20" lean-forward="true" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <marker date="1537948466104" expanded="true" signature="60:124" ph="..." />
-                <marker date="1537948466104" expanded="true" signature="216:221" ph="..." />
-                <marker date="1537948466104" expanded="true" signature="216:952" ph="..." />
-                <marker date="1537948466104" expanded="true" signature="861:883" ph="..." />
+                <marker date="1537959316510" expanded="true" signature="71:135" ph="..." />
+                <marker date="1537959316510" expanded="true" signature="227:232" ph="..." />
+                <marker date="1537959316510" expanded="true" signature="1133:1155" ph="..." />
               </folding>
             </state>
           </provider>
@@ -100,8 +101,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/flask/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
+            <state relative-caret-position="40716">
               <caret line="2291" selection-start-line="2291" selection-end-line="2291" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DATA/input.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2466">
+              <caret line="137" column="22" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -110,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/src/static/predictHome.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -150,8 +160,8 @@
         <option value="$PROJECT_DIR$/DATA/test.csv" />
         <option value="$PROJECT_DIR$/src/templates/predictHome.html" />
         <option value="$PROJECT_DIR$/src/static/predictHome.html" />
-        <option value="$PROJECT_DIR$/src/Driver.py" />
         <option value="$PROJECT_DIR$/src/Server.py" />
+        <option value="$PROJECT_DIR$/src/Driver.py" />
       </list>
     </option>
   </component>
@@ -408,14 +418,21 @@
       <option name="project" value="LOCAL" />
       <updated>1537948221984</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="handled maxDifficulyu">
+      <created>1537948516169</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1537948516169</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.284522" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.284522" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -488,7 +505,8 @@
     <MESSAGE value="done initial workking" />
     <MESSAGE value="Woeking Version" />
     <MESSAGE value="modified frontPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified frontPage" />
+    <MESSAGE value="handled maxDifficulyu" />
+    <option name="LAST_COMMIT_MESSAGE" value="handled maxDifficulyu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -559,20 +577,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DATA/input.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="176" column="8" selection-start-line="176" selection-start-column="8" selection-end-line="176" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/predictHome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/predictHome.html" />
     <entry file="file:///usr/lib/python3.6/http/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -591,9 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
           <caret line="59" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <marker date="1537812307049" expanded="true" signature="530:644" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -620,40 +622,47 @@
     </entry>
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
+        <state relative-caret-position="40716">
           <caret line="2291" selection-start-line="2291" selection-end-line="2291" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DATA/input.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2466">
+          <caret line="137" column="22" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/static/predictHome.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Driver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="121" column="50" selection-start-line="121" selection-start-column="50" selection-end-line="121" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1537948282945" expanded="true" signature="3197:3455" ph="..." />
-            <marker date="1537948282945" expanded="true" signature="5068:5307" ph="..." />
-          </folding>
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        <state relative-caret-position="121">
+          <caret line="35" column="20" lean-forward="true" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <marker date="1537948466104" expanded="true" signature="60:124" ph="..." />
-            <marker date="1537948466104" expanded="true" signature="216:221" ph="..." />
-            <marker date="1537948466104" expanded="true" signature="216:952" ph="..." />
-            <marker date="1537948466104" expanded="true" signature="861:883" ph="..." />
+            <marker date="1537959316510" expanded="true" signature="71:135" ph="..." />
+            <marker date="1537959316510" expanded="true" signature="227:232" ph="..." />
+            <marker date="1537959316510" expanded="true" signature="1133:1155" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Driver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="111" column="54" selection-start-line="111" selection-start-column="54" selection-end-line="111" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1537959771314" expanded="true" signature="3490:3583" ph="..." />
+            <marker date="1537959771314" expanded="true" signature="3582:3583" ph="..." />
+            <marker date="1537959771314" expanded="true" signature="5026:5371" ph="..." />
           </folding>
         </state>
       </provider>
