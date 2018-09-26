@@ -118,6 +118,8 @@ def PredictNextSubject(student_subjects,pred_subjects,debug=False):
         print("Difficulty of Subjects choosen by student {}".format([[sub, difficulty[sub]] for sub in student_subjects if sub!=None]))
         print("Difficulty of Subjects predicted for student {}".format([[sub, difficulty[sub]] for sub in pred_subjects if sub!=None]))
         print("Next Difficulty : {}  Subject: {}".format(nextDifficulty,nextDifficultySubject))
+    if(nextDifficultySubject==None):
+        raise Exception("Max difficulty reached");
     return nextDifficultySubject
 
 

@@ -20,8 +20,9 @@ def predictNextSubject():
             print("Next Subject",nextSubject);
             returnString="{"+ "\"nextSubject\":\" "+"{}".format(nextSubject)+"\"}";
             return returnString
-        except:
-            return 'Error'
+        except Exception as e:
+            returnString = "{" + "\"nextSubject\":\" " + "{}".format('Error: '+str(e)) + "\"}";
+            return returnString
     return "Working"
 
 def setupDriver():
