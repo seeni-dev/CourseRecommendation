@@ -40,6 +40,7 @@
         </div>
     </div>
     <script>
+        var model={};
         var sendRequest=function (e) {
             e.preventDefault();
             var id=document.getElementById("id").value;
@@ -63,13 +64,23 @@
             asyncRequest.open(method="POST",url="/predict");
             asyncRequest.setRequestHeader("Content-Type","application/json;charset=utf-8");
             asyncRequest.onload=function (response) {
-                if(this.status>=400)
-                    console.log("Error happened in Server. Not expected behaviour "+response);
+
+                if(this.status>=400) {
+                    document.getElementById("nextSubject").innerText = "Error happened in Server. Not expected behaviour from Client ";
+                    return;
+                }
                 console.log("Next Subject:",this.response);
                 var data=JSON.parse(this.response);
                 document.getElementById("nextSubject").innerText=data.nextSubject;
+                if(data.status==2) //max Difficutly #todo change status to numbers
+                    document.getElementById("nextSubject").innerText="It looks like you mastered the field . Try doing projects(recommendated)  Or take basic courses to brush up your basics Or learn some other field course which will help you later in your life";
+                if(data.status==1)
+                    document.getElementById("nextSubject").innerText="Error in Input. Use Capitals and only valid subjects codes";
+                model=data;
             };
-            asyncRequest.onerror=function (ev) { debugger; }
+            asyncRequest.onerror=function (ev) {
+                document.getElementById("nextSubject").innerText="Error Happened. Try contacting the Admin";
+            }
             asyncRequest.send(JSON.stringify(student));
         };
         document.getElementById("submit").addEventListener("click",sendRequest);

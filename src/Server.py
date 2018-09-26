@@ -20,7 +20,7 @@ def predictNextSubject():
             print("Next Subject",nextSubject);
             reply={
                 "nextSubject":nextSubject,
-                "status":"OK",
+                "status":1,
                 "error":"None",
                 "nextSubjectDifficulty":nextSubjectDifficulty,
                 "maxDifficultyStudent":maxDifficultyStudent,
@@ -31,12 +31,11 @@ def predictNextSubject():
         except Exception as e:
             print(e)
             reply={
-                "status":"Error",
+                "status":1,
                 "error":str(e)
             }
-
             if(str(e)=="MD"):
-                reply["status"]="MD"
+                reply["status"]=2
             return json.dumps(reply)
 
 def setupDriver():
