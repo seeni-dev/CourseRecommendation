@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+</head>
+<body>
+    <form action="/predict" method="post">
+        <label for="id">ID</label>
+        <input type="text" name="id" id="id" /> <br /><br />
+        <label for="fi">FI</label>
+        <input type="text" name="fi" id="fi" /> <br /><br />
+        <label for="subject1">Elective 1 Subject</label>
+        <input type="text" class="subject" name="subject1"><br /><br />
+        <label for="subject2">Elective 2 Subject</label>
+        <input type="text" class="subject" name="subject2"><br /><br />
+        <label for="subject3">Elective 3 Subject</label>
+        <input type="text" class="subject" name="subject3"><br /><br />
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    <script>
+        var sendRequest=function (e) {
+            e.preventDefault();
+            var id=document.getElementById("id").value;
+            var fi=document.getElementById("fi").value;
+            var subjects_raw=document.getElementsByClassName("subject");
+            var subjects=[];
+            for(let i=0;i<subjects_raw.length;i++){
+                sub=subjects_raw[i];
+                if(sub.value ==""){
+                   // subjects.push("None");
+                }
+                else
+                    subjects.push(sub.value);
+            }
+            var student={
+                "ID":id,
+                "FI":fi,
+                "S":subjects
+            };
+            var asyncRequest= new XMLHttpRequest();
+            asyncRequest.open(method="POST",url="/predict");
+            asyncRequest.setRequestHeader("Content-Type","application/json;charset=utf-8");
+            asyncRequest.onload=function (response) {
+                if(this.status>=400)
+                    console.log("Error happened in Server. Not expected behaviour "+response);
+                console.log("Next Subject:",this.response);
+            };
+            asyncRequest.onerror=function (ev) { debugger; }
+            asyncRequest.send(JSON.stringify(student));
+        };
+        document.getElementById("submit").addEventListener("click",sendRequest);
+    </script>
+</body>
+</html>
