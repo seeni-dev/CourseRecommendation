@@ -5,19 +5,24 @@
     <title>Predict</title>
 </head>
 <body>
-    <form action="/predict" method="post">
-        <label for="id">ID</label>
-        <input type="text" name="id" id="id" /> <br /><br />
-        <label for="fi">FI</label>
-        <input type="text" name="fi" id="fi" /> <br /><br />
-        <label for="subject1">Elective 1 Subject</label>
-        <input type="text" class="subject" name="subject1"><br /><br />
-        <label for="subject2">Elective 2 Subject</label>
-        <input type="text" class="subject" name="subject2"><br /><br />
-        <label for="subject3">Elective 3 Subject</label>
-        <input type="text" class="subject" name="subject3"><br /><br />
-        <button type="submit" id="submit">Submit</button>
-    </form>
+    <div class="container-horizontal">
+        <form action="/predict" method="post">
+            <label for="id">ID</label>
+            <input type="text" name="id" id="id" /> <br /><br />
+            <label for="fi">FI</label>
+            <input type="text" name="fi" id="fi" /> <br /><br />
+            <label for="subject1">Elective 1 Subject</label>
+            <input type="text" class="subject" name="subject1"><br /><br />
+            <label for="subject2">Elective 2 Subject</label>
+            <input type="text" class="subject" name="subject2"><br /><br />
+            <label for="subject3">Elective 3 Subject</label>
+            <input type="text" class="subject" name="subject3"><br /><br />
+            <button type="submit" id="submit">Submit</button>
+        </form>
+        <div id="nextSubject">
+
+        </div>
+    </div>
     <script>
         var sendRequest=function (e) {
             e.preventDefault();
@@ -45,6 +50,8 @@
                 if(this.status>=400)
                     console.log("Error happened in Server. Not expected behaviour "+response);
                 console.log("Next Subject:",this.response);
+                var data=JSON.parse(this.response);
+                document.getElementById("nextSubject").innerText=data.nextSubject;
             };
             asyncRequest.onerror=function (ev) { debugger; }
             asyncRequest.send(JSON.stringify(student));

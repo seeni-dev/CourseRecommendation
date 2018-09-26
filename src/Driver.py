@@ -136,7 +136,7 @@ def PredictForServer(studentRecord):
     studentRecord=formatStudent(studentRecord)
     result=PredictRaw(studentRecord)
     nextSubject=PredictNextSubject(studentRecord[2:],result["S"])
-    print("REsult",result)
+    print("Result",result)
     print("nextSubject",nextSubject)
     return nextSubject
 
