@@ -48,7 +48,7 @@ def PredictRaw(studentRecord):
     :studentRecord: data of the format [ID,FI,E1...E2] ID and FI are must
     :return: list of subjects he should have studied
     """
-
+    studentRecord=formatStudent(studentRecord)
     pred_data=pd.DataFrame().from_records([studentRecord])
     pred_data.columns=["ID","FI","E","E","E"]
     pred_data_pro=Preprocessor.preprocess(pred_data,train=False)
@@ -121,12 +121,23 @@ def PredictNextSubject(student_subjects,pred_subjects,debug=False):
     return nextDifficultySubject
 
 
+def formatStudent(stu):
+    if(len(stu)<2 ):
+        raise Exception("Fields ID and FI are mandatory arguments")
+    currentLength=len(stu)
+    requiredLength=5
+    while currentLength<requiredLength:
+        stu.append(None)
+        currentLength+=1
+    print(stu)
+    return stu
+
+
 if __name__ == '__main__':
     Train()
     result=PredictRaw([1,"AI","OS","CN","CV"])
     print("OUTPUT:",result)
-    result=PredictRaw([1,"AI",None,None,None])
+    result=PredictRaw([1,"AI"])
     print("OUTPUT:",result)
     nextSubject=PredictNextSubject(["SA",None,None],result["S"])
-    import pdb
-    pdb.set_trace()
+    print("Next Subject:",nextSubject)
