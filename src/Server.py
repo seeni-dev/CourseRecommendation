@@ -20,7 +20,7 @@ def predictNextSubject():
             print("Next Subject",nextSubject);
             reply={
                 "nextSubject":nextSubject,
-                "status":1,
+                "status":0,
                 "error":"None",
                 "nextSubjectDifficulty":nextSubjectDifficulty,
                 "maxDifficultyStudent":maxDifficultyStudent,

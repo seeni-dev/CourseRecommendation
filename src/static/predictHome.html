@@ -13,6 +13,16 @@
         .container-entry.form{
             width: 60%;
         }
+        form,.container{
+            text-align: center;
+        }
+        #select,#advice{
+            min-height: 20px;
+            margin:30px;
+            background-color: green ;
+            padding: 10px;
+            box-shadow: 0 0 10px 2px gray ;
+        }
     </style>
 </head>
 <body>
@@ -39,8 +49,18 @@
             </div>
         </div>
     </div>
+    <br><br><br>
+    <div class="container">
+        <label for="selectedSubject">Select a Subject </label>
+        <input type="text" id="selectedSubject" name="selectedSubject">
+        <br/><br><br/>
+        <a id="select">I choose this</a>
+        <div id="advice">
+            Fill the Above Form and select a subject to get Feedback
+        </div>
+    </div>
     <script>
-        var model={};
+        var data={};
         var sendRequest=function (e) {
             e.preventDefault();
             var id=document.getElementById("id").value;
@@ -70,13 +90,12 @@
                     return;
                 }
                 console.log("Next Subject:",this.response);
-                var data=JSON.parse(this.response);
+                data=JSON.parse(this.response);
                 document.getElementById("nextSubject").innerText=data.nextSubject;
-                if(data.status==2) //max Difficutly #todo change status to numbers
+                if(data.status==2) //max Difficutly
                     document.getElementById("nextSubject").innerText="It looks like you mastered the field . Try doing projects(recommendated)  Or take basic courses to brush up your basics Or learn some other field course which will help you later in your life";
                 if(data.status==1)
                     document.getElementById("nextSubject").innerText="Error in Input. Use Capitals and only valid subjects codes";
-                model=data;
             };
             asyncRequest.onerror=function (ev) {
                 document.getElementById("nextSubject").innerText="Error Happened. Try contacting the Admin";
@@ -84,6 +103,18 @@
             asyncRequest.send(JSON.stringify(student));
         };
         document.getElementById("submit").addEventListener("click",sendRequest);
+
+        document.getElementById("select").addEventListener("click",function (e) {
+            e.preventDefault();
+            var selectedSubject=document.getElementById("selectedSubject").value;
+            if(selectedSubject!=data.nextSubject){
+                document.getElementById("advice").innerText="No Dont Make me angy";
+            }
+            else {
+                document.getElementById("advice").innerText="Looks good";
+            }
+        });
+
     </script>
 </body>
 </html>
