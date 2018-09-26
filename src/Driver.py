@@ -132,12 +132,13 @@ def formatStudent(stu):
     print(stu)
     return stu
 
+def PredictForServer(studentRecord):
+    studentRecord=formatStudent(studentRecord)
+    result=PredictRaw(studentRecord)
+    nextSubject=PredictNextSubject(studentRecord[2:],result["S"])
+    print("REsult",result)
+    print("nextSubject",nextSubject)
 
 if __name__ == '__main__':
     Train()
-    result=PredictRaw([1,"AI","OS","CN","CV"])
-    print("OUTPUT:",result)
-    result=PredictRaw([1,"AI"])
-    print("OUTPUT:",result)
-    nextSubject=PredictNextSubject(["SA",None,None],result["S"])
-    print("Next Subject:",nextSubject)
+    PredictForServer([1,"AI","SA"])
