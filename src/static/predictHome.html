@@ -109,7 +109,7 @@
             var selectedSubject=document.getElementById("selectedSubject").value;
             if(selectedSubject!=data.nextSubject){
                 console.log(data);
-                document.getElementById("advice").innerHTML="Are You sure? It looks like you are taking  a subject with high risk. Dont take my word though.<br/><br/> Choose any of these "+data.allowableSubjects.map(sub => sub)+". <br/><br/>All the best";
+                document.getElementById("advice").innerHTML="Are You sure? It looks like you are taking  a subject with high risk.<br/><br/>It will be beneficial if  you prefer Recommended Subject or similar ones. <br/><br/> Dont take my word though. Choose any of these you prefer === "+data.allowableSubjects.map(sub => sub)+". <br/><br/>All the best";
             }
             else {
                 document.getElementById("advice").innerHTML="Looks good. Thanks For Trusting the System. All the Best.";
