@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Predict</title>
+    <style>
+        .container-horizontal{
+            display: flex;
+        }
+        .container-entry{
+            text-align: center;
+        }
+        .container-entry.form{
+            width: 60%;
+        }
+    </style>
 </head>
 <body>
     <div class="container-horizontal">
-        <form action="/predict" method="post">
-            <label for="id">ID</label>
-            <input type="text" name="id" id="id" /> <br /><br />
-            <label for="fi">FI</label>
-            <input type="text" name="fi" id="fi" /> <br /><br />
-            <label for="subject1">Elective 1 Subject</label>
-            <input type="text" class="subject" name="subject1"><br /><br />
-            <label for="subject2">Elective 2 Subject</label>
-            <input type="text" class="subject" name="subject2"><br /><br />
-            <label for="subject3">Elective 3 Subject</label>
-            <input type="text" class="subject" name="subject3"><br /><br />
-            <button type="submit" id="submit">Submit</button>
-        </form>
-        <div id="nextSubject">
+        <div class="container-entry form">
+            <form action="/predict" method="post" >
+                <label for="id">ID</label>
+                <input type="text" name="id" id="id" /> <br /><br />
+                <label for="fi">FI</label>
+                <input type="text" name="fi" id="fi" /> <br /><br />
+                <label for="subject1">Elective 1 Subject</label>
+                <input type="text" class="subject" name="subject1"><br /><br />
+                <label for="subject2">Elective 2 Subject</label>
+                <input type="text" class="subject" name="subject2"><br /><br />
+                <label for="subject3">Elective 3 Subject</label>
+                <input type="text" class="subject" name="subject3"><br /><br />
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+        <div class="container-entry">
+            <h1>Next Subject</h1>
+            <div id="nextSubject">
 
+            </div>
         </div>
     </div>
     <script>
