@@ -107,13 +107,20 @@
         document.getElementById("select").addEventListener("click",function (e) {
             e.preventDefault();
             var selectedSubject=document.getElementById("selectedSubject").value;
-            if(selectedSubject!=data.nextSubject){
+            if(selectedSubject==data.nextSubject){
+                                    document.getElementById("advice").innerHTML="Looks good. Thanks For Trusting the System. All the Best.";
+
+            }
+            else
+                if (data.allowableSubjects.indexOf(selectedSubject)>-1){
                 console.log(data);
                 document.getElementById("advice").innerHTML="Are You sure? It looks like you are taking  a subject with high risk.<br/><br/>It will be beneficial if  you prefer Recommended Subject or similar ones. <br/><br/> Dont take my word though. Choose any of these you prefer === "+data.allowableSubjects.map(sub => sub)+". <br/><br/>All the best";
+
+                }
+            else{
+                  document.getElementById("advice").innerHTML="Error in your Subject Name. Use Only capitals for subjects";
             }
-            else {
-                document.getElementById("advice").innerHTML="Looks good. Thanks For Trusting the System. All the Best.";
-            }
+
         });
 
     </script>
