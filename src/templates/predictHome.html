@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Predict</title>
+    <title>CoRec - Course Recommendation Engine</title>
     <style>
         .container-horizontal{
             display: flex;
@@ -26,10 +26,15 @@
         #select{
             cursor: pointer;
         }
+        header{
+            display:flex;
+            text-align:center;
+        }
     </style>
 </head>
+<header>CoRec - Course Recommendation Engine </header>
 <body>
-    <div class="container-horizontal">
+        <div class="container-horizontal">
         <div class="container-entry form">
             <form action="/predict" method="post" >
                 <label for="id">ID</label>

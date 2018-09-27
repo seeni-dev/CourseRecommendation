@@ -5,9 +5,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/Preprocessor.py" description="values.append(1 if sub in subjects else 0)" line="70" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e57cbe-ef76-4195-8b93-0e3d4a8b2a58" name="Default" comment="U">
+    <list default="true" id="c4e57cbe-ef76-4195-8b93-0e3d4a8b2a58" name="Default" comment="fix heroku issue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/predictHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/predictHome.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +17,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CourseRecommendation$Driver.coverage" NAME="Driver Coverage Results" MODIFIED="1537942752559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/CourseRecommendation$Server.coverage" NAME="Server Coverage Results" MODIFIED="1537976337177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/CourseRecommendation$Server.coverage" NAME="Server Coverage Results" MODIFIED="1538038091181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="188262683">
@@ -53,17 +53,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Procfile" value="31" />
+          <entry key="Procfile" value="35" />
           <entry key="csv" value="60" />
-          <entry key="html" value="3743" />
+          <entry key="html" value="3920" />
           <entry key="py" value="9648" />
-          <entry key="txt" value="565" />
+          <entry key="txt" value="633" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3743" />
-          <entry key="PLAIN_TEXT" value="651" />
+          <entry key="HTML" value="3920" />
+          <entry key="PLAIN_TEXT" value="723" />
           <entry key="Python" value="9648" />
           <entry key="UNKNOWN" value="5" />
         </counts>
@@ -75,39 +75,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Driver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
+            <state relative-caret-position="76">
+              <caret line="108" column="18" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1537960762176" expanded="true" signature="3490:3583" ph="..." />
-                <marker date="1537960762176" expanded="true" signature="3582:3583" ph="..." />
-                <marker date="1537960762176" expanded="true" signature="5101:5464" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-                <marker date="1538037570165" expanded="true" signature="104:163" ph="..." />
-                <marker date="1538037570165" expanded="true" signature="231:281" ph="..." />
-                <marker date="1538037570165" expanded="true" signature="352:357" ph="..." />
-                <marker date="1538037570165" expanded="true" signature="1369:1371" ph="..." />
+                <marker date="1538037771512" expanded="true" signature="3484:3577" ph="..." />
+                <marker date="1538037771512" expanded="true" signature="3576:3577" ph="..." />
+                <marker date="1538037771512" expanded="true" signature="5095:5458" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+                <marker date="1538037626945" expanded="true" signature="104:163" ph="..." />
+                <marker date="1538037626945" expanded="true" signature="231:281" ph="..." />
+                <marker date="1538037626945" expanded="true" signature="352:357" ph="..." />
+                <marker date="1538037626945" expanded="true" signature="1369:1371" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/templates/predictHome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="120" column="18" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
+            <state relative-caret-position="36">
+              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -115,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="49">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -124,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            <state relative-caret-position="18">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -174,12 +174,12 @@
         <option value="$PROJECT_DIR$/src/Model.py" />
         <option value="$PROJECT_DIR$/src/Preprocessor.py" />
         <option value="$PROJECT_DIR$/DATA/test.csv" />
-        <option value="$PROJECT_DIR$/src/Driver.py" />
         <option value="$PROJECT_DIR$/src/static/predictHome.html" />
-        <option value="$PROJECT_DIR$/src/templates/predictHome.html" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/src/Server.py" />
+        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/src/Driver.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/src/templates/predictHome.html" />
       </list>
     </option>
   </component>
@@ -515,7 +515,35 @@
       <option name="project" value="LOCAL" />
       <updated>1538037395664</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="port change">
+      <created>1538037600972</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1538037600972</updated>
+    </task>
+    <task id="LOCAL-00032" summary="fix heroku issue">
+      <created>1538037798961</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1538037798961</updated>
+    </task>
+    <task id="LOCAL-00033" summary="fix heroku issue sklearn">
+      <created>1538037916813</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1538037916813</updated>
+    </task>
+    <task id="LOCAL-00034" summary="cursor pointer">
+      <created>1538038157104</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1538038157104</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -527,12 +555,12 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924126" visible="true" weight="0.38322368" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924126" weight="0.38322368" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.62335527" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.6743421" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.6743421" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.32894737" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007587" side_tool="true" weight="0.54769737" />
@@ -578,10 +606,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="done Train" />
-    <MESSAGE value="done clean Handler.py" />
-    <MESSAGE value="clean model done" />
-    <MESSAGE value="done preprocessor" />
     <MESSAGE value="done clean Driver" />
     <MESSAGE value="fix typo" />
     <MESSAGE value="done PredictRawMethod" />
@@ -603,7 +627,11 @@
     <MESSAGE value="done" />
     <MESSAGE value="change in pyhon version" />
     <MESSAGE value="runtime change" />
-    <option name="LAST_COMMIT_MESSAGE" value="runtime change" />
+    <MESSAGE value="port change" />
+    <MESSAGE value="fix heroku issue" />
+    <MESSAGE value="fix heroku issue sklearn" />
+    <MESSAGE value="cursor pointer" />
+    <option name="LAST_COMMIT_MESSAGE" value="cursor pointer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -725,13 +753,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Driver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
+        <state relative-caret-position="76">
+          <caret line="108" column="18" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1537960762176" expanded="true" signature="3490:3583" ph="..." />
-            <marker date="1537960762176" expanded="true" signature="3582:3583" ph="..." />
-            <marker date="1537960762176" expanded="true" signature="5101:5464" ph="..." />
+            <marker date="1538037771512" expanded="true" signature="3484:3577" ph="..." />
+            <marker date="1538037771512" expanded="true" signature="3576:3577" ph="..." />
+            <marker date="1538037771512" expanded="true" signature="5095:5458" ph="..." />
           </folding>
         </state>
       </provider>
@@ -752,36 +780,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+        <state relative-caret-position="48">
+          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
-            <marker date="1538037570165" expanded="true" signature="104:163" ph="..." />
-            <marker date="1538037570165" expanded="true" signature="231:281" ph="..." />
-            <marker date="1538037570165" expanded="true" signature="352:357" ph="..." />
-            <marker date="1538037570165" expanded="true" signature="1369:1371" ph="..." />
+            <marker date="1538037626945" expanded="true" signature="104:163" ph="..." />
+            <marker date="1538037626945" expanded="true" signature="231:281" ph="..." />
+            <marker date="1538037626945" expanded="true" signature="352:357" ph="..." />
+            <marker date="1538037626945" expanded="true" signature="1369:1371" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/predictHome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="120" column="18" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
+        <state relative-caret-position="36">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="49">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
