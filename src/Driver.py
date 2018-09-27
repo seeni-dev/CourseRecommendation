@@ -8,7 +8,7 @@ def Train():
     :return:
     """
     # initialize source -csv source
-    csvhand = Handler.CSVHandler("../DATA/input.csv")
+    csvhand = Handler.CSVHandler("DATA/input.csv")
     train_data = csvhand.getData()
     train_data_pro = Preprocessor.preprocess(train_data)
     Model.Init() #intialize the model
@@ -22,7 +22,7 @@ def Predict():
     """
 
     #get user input from file test.csv
-    csvhand=Handler.CSVHandler("../DATA/test.csv")
+    csvhand=Handler.CSVHandler("DATA/test.csv")
     pred_data=csvhand.getData()
     pred_data_pro=Preprocessor.preprocess(pred_data,train=False)
     fieldsInData=list(Preprocessor.getFI())+list(Preprocessor.getSubjects()) # fields are FI_X and S_X
