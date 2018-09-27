@@ -7,7 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c4e57cbe-ef76-4195-8b93-0e3d4a8b2a58" name="Default" comment="U">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/predictHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/predictHome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,40 +28,44 @@
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.27" value="1" />
-          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.35" value="2" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="Procfile" value="2" />
           <entry key="csv" value="11" />
-          <entry key="html" value="2" />
+          <entry key="html" value="5" />
           <entry key="py" value="59" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="2" />
-          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="HTML" value="5" />
+          <entry key="PLAIN_TEXT" value="16" />
           <entry key="Python" value="59" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="Procfile" value="31" />
           <entry key="csv" value="60" />
-          <entry key="html" value="3587" />
-          <entry key="py" value="9409" />
-          <entry key="txt" value="487" />
+          <entry key="html" value="3743" />
+          <entry key="py" value="9648" />
+          <entry key="txt" value="565" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3587" />
-          <entry key="PLAIN_TEXT" value="547" />
-          <entry key="Python" value="9409" />
+          <entry key="HTML" value="3743" />
+          <entry key="PLAIN_TEXT" value="651" />
+          <entry key="Python" value="9648" />
+          <entry key="UNKNOWN" value="5" />
         </counts>
       </usages-collector>
     </session>
@@ -71,7 +75,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Driver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
+            <state>
               <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -83,17 +87,45 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="52">
+              <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <marker date="1537975827027" expanded="true" signature="71:135" ph="..." />
-                <marker date="1537975827027" expanded="true" signature="227:232" ph="..." />
-                <marker date="1537975827027" expanded="true" signature="1261:1283" ph="..." />
+                <element signature="e#0#47#0" expanded="true" />
+                <marker date="1538037570165" expanded="true" signature="104:163" ph="..." />
+                <marker date="1538037570165" expanded="true" signature="231:281" ph="..." />
+                <marker date="1538037570165" expanded="true" signature="352:357" ph="..." />
+                <marker date="1538037570165" expanded="true" signature="1369:1371" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/templates/predictHome.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="120" column="18" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="31">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -103,15 +135,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2466">
               <caret line="137" column="22" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/static/predictHome.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="111" column="212" selection-start-line="111" selection-start-column="212" selection-end-line="111" selection-end-column="212" />
             </state>
           </provider>
         </entry>
@@ -130,6 +153,7 @@
     <findStrings>
       <find>'''</find>
       <find>document.getElementById(&quot;nextSubject&quot;).innerText=&quot;Error Happened. Try contacting the Admin&quot;;</find>
+      <find>nump</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;&quot;&quot;</replace>
@@ -150,10 +174,12 @@
         <option value="$PROJECT_DIR$/src/Model.py" />
         <option value="$PROJECT_DIR$/src/Preprocessor.py" />
         <option value="$PROJECT_DIR$/DATA/test.csv" />
-        <option value="$PROJECT_DIR$/src/templates/predictHome.html" />
         <option value="$PROJECT_DIR$/src/Driver.py" />
-        <option value="$PROJECT_DIR$/src/Server.py" />
         <option value="$PROJECT_DIR$/src/static/predictHome.html" />
+        <option value="$PROJECT_DIR$/src/templates/predictHome.html" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/src/Server.py" />
       </list>
     </option>
   </component>
@@ -174,7 +200,31 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CourseRecommendation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseRecommendation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourseRecommendation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseRecommendation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourseRecommendation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseRecommendation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -430,14 +480,49 @@
       <option name="project" value="LOCAL" />
       <updated>1537977779462</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="root and home done">
+      <created>1538035049808</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1538035049808</updated>
+    </task>
+    <task id="LOCAL-00027" summary="done">
+      <created>1538036828895</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1538036828895</updated>
+    </task>
+    <task id="LOCAL-00028" summary="done">
+      <created>1538037248140</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1538037248140</updated>
+    </task>
+    <task id="LOCAL-00029" summary="change in pyhon version">
+      <created>1538037343213</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1538037343213</updated>
+    </task>
+    <task id="LOCAL-00030" summary="runtime change">
+      <created>1538037395664</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1538037395664</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.284522" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.284522" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -447,7 +532,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.5361842" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.6743421" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.32894737" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007587" side_tool="true" weight="0.54769737" />
@@ -493,10 +578,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="CSV handler working" />
-    <MESSAGE value="add todo in .git" />
-    <MESSAGE value="handler docstring for CSVHandler" />
-    <MESSAGE value="getBestModel working" />
     <MESSAGE value="done Train" />
     <MESSAGE value="done clean Handler.py" />
     <MESSAGE value="clean model done" />
@@ -518,7 +599,11 @@
     <MESSAGE value="UI done" />
     <MESSAGE value="prompt done" />
     <MESSAGE value="final Version" />
-    <option name="LAST_COMMIT_MESSAGE" value="final Version" />
+    <MESSAGE value="root and home done" />
+    <MESSAGE value="done" />
+    <MESSAGE value="change in pyhon version" />
+    <MESSAGE value="runtime change" />
+    <option name="LAST_COMMIT_MESSAGE" value="runtime change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -589,7 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/predictHome.html" />
     <entry file="file:///usr/lib/python3.6/http/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -639,16 +723,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DATA/input.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2466">
-          <caret line="137" column="22" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Driver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
+        <state>
           <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -659,25 +736,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server.py">
+    <entry file="file://$PROJECT_DIR$/DATA/input.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <marker date="1537975827027" expanded="true" signature="71:135" ph="..." />
-            <marker date="1537975827027" expanded="true" signature="227:232" ph="..." />
-            <marker date="1537975827027" expanded="true" signature="1261:1283" ph="..." />
-          </folding>
+        <state relative-caret-position="2466">
+          <caret line="137" column="22" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/static/predictHome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="111" column="212" selection-start-line="111" selection-start-column="212" selection-end-line="111" selection-end-column="212" />
+        <state relative-caret-position="154">
+          <caret line="114" column="62" selection-start-line="114" selection-start-column="62" selection-end-line="114" selection-end-column="62" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+            <marker date="1538037570165" expanded="true" signature="104:163" ph="..." />
+            <marker date="1538037570165" expanded="true" signature="231:281" ph="..." />
+            <marker date="1538037570165" expanded="true" signature="352:357" ph="..." />
+            <marker date="1538037570165" expanded="true" signature="1369:1371" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/predictHome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="120" column="18" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
