@@ -1,0 +1,5 @@
+Install Python 3.5
+Install Python3 PIP
+Install all the necessary packages using: "pip install -r requirements.txt"
+Start the server using: "python3 src/Server.py"
+Visit: "localhost:4567" in your browser
